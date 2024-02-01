@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { LocaleSwitcher } from "./locale-switcher";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +27,9 @@ export default async function RootLayout({ params, children }: LayoutProps) {
       <body className={inter.className}>
         {/* <DebugBar /> */}
         <header className="p-4">
-          <div className="p-4 bg-neutral-950">
+          <div className="p-4 bg-neutral-950 flex flex-wrap items-center justify-between">
             <p>RootLayout locale: {locale}</p>
+            <LocaleSwitcher />
           </div>
         </header>
         {/* Page */}

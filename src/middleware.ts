@@ -1,5 +1,6 @@
 import { composeMiddleware } from "@/middlewares/utils.chain";
 import { handleLogging } from "@/middlewares/handle-logging";
+import { handleI18n } from "./i18n/i18n.middleware";
 
 // TODO: migrate matcher to single midldeware instead of a global one
 export const config = {
@@ -14,6 +15,11 @@ export const config = {
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 
+  /*
+  Alternative
+  */
+  // matcher: ['/((?!api|static|.*\\..*|_next|favicon.ico|robots.txt).*)']
+
   //
   // // Match only internationalized pathnames
   // matcher: ['/', '/(de|en)/:path*']
@@ -21,5 +27,5 @@ export const config = {
 
 export const middleware = composeMiddleware([
   handleLogging,
-  // handleI18n,
+  handleI18n,
 ]);
