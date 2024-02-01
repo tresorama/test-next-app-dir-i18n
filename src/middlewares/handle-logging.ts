@@ -7,7 +7,7 @@ export const handleLogging: MiddlewareFunction = async (request, next) => {
   console.log("=============== REQUEST ========================");
   console.log({
     what: "middleware - handleLogging",
-    req: `${request.method} ${request.url}`
+    req: `${request.method} ${request.nextUrl.pathname}`
   });
 
   return next();
