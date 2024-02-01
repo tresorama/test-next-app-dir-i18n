@@ -1,6 +1,5 @@
-
-import { mergeHeaders } from "./utils.merge-headers";
 import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
+import { mergeHeaders } from "./middleware.utils.merge-headers";
 
 type GoNextMiddleware = () => "continue";
 
@@ -9,10 +8,7 @@ export type MiddlewareFunction = (
   next: GoNextMiddleware,
   event: NextFetchEvent,
 ) =>
-  | Promise<NextResponse<unknown> | Response | ReturnType<GoNextMiddleware>>
-  | NextResponse<unknown>
-  | Response
-  | ReturnType<GoNextMiddleware>;
+  | Promise<NextResponse<unknown> | Response | ReturnType<GoNextMiddleware>>;
 
 export function composeMiddleware(handlers: MiddlewareFunction[] = []) {
   const validMiddlewareHandlers = handlers
