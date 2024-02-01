@@ -1,0 +1,14 @@
+{
+  "home": {
+    "title": "Home"
+  },
+  "static-page": {
+    "title": "Static Page"
+  },
+  "dynamic-page": {
+    "title": "Dynamic Page"
+  },
+  "client-page": {
+    "title": "Client Component Page"
+  }
+}
