@@ -4,30 +4,22 @@ Test internationalization wit various library.
 Every test has a differnet `git branch`
 
 - [ ] `manual`  
-  long to implement but doable and you can control every logic flow
+  2024-02-01 with next@14.1.0 => ✅ long to implement but doable and you can control every logic flow
 - [ ] `paraglidjs` *by* [`inlang`](https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
-- [ ] [`next-international`](https://github.com/QuiiBz/next-international)  
-  
+- [x] [`next-international`](https://github.com/QuiiBz/next-international)  
+  2024-02-01 with next@14.1.0 => ✅
 - [ ] [`react-intl`](https://formatjs.io/)  
-  TODO
 - [ ] `react-i18next`  
-  TODO
 - [ ] `lingui`  
-  TODO
 - [ ] `rosetta`  
-  TODO
-- [ ] [`next-intl`](https://next-intl-docs.vercel.app/)  
-  ok with server component, error with client
-- [ ] `next-translate`  
-  2024-02-01 with next@14.1.0 => not working  
+- [x] [`next-intl`](https://next-intl-docs.vercel.app/)  
+  2024-02-01 with next@14.1.0 => ❌ ok with server component, error with client
+- [x] `next-translate`  
+  2024-02-01 with next@14.1.0 => ❌ not working  
 - [ ] `next-multilingual`  
-  TODO
 - [ ] `typesafe-i18n`  
-  TODO
 - [ ] `tolgee` ($)  
-  TODO
 - [ ] `i18next`  
-  TODO
 
 ## Other things
 
