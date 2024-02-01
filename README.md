@@ -19,7 +19,7 @@ Every test has a differnet `git branch`
 - [ ] [`next-intl`](https://next-intl-docs.vercel.app/)  
   ok with server component, error with client
 - [ ] `next-translate`  
-  TODO
+  2024-02-01 with next@14.1.0 => not working  
 - [ ] `next-multilingual`  
   TODO
 - [ ] `typesafe-i18n`  
@@ -31,4 +31,7 @@ Every test has a differnet `git branch`
 
 ## Other things
 
-- https://i18now.dev/
+- general
+  - https://i18now.dev/
+- next-translate
+  - https://www.izoukhai.com/blog/implement-internationalization-i18n-in-next-13-actually-working
