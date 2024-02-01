@@ -2,7 +2,6 @@
 
 import { composeMiddleware } from "@/middlewares/utils.chain";
 import { handleLogging } from "@/middlewares/handle-logging";
-import { handleI18n } from "@/i18n/i18n.middleware";
 
 // TODO: migrate matcher to single midldeware instead of a global one
 export const config = {
@@ -25,5 +24,4 @@ export const config = {
 
 export const middleware = composeMiddleware([
   handleLogging,
-  handleI18n,
 ]);

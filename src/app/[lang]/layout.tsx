@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { locales, defaultLocale } from '@root/i18n';
 import "./globals.css";
+import { redirect } from "next/navigation";
+import useTranslation from 'next-translate/useTranslation';
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -10,24 +14,32 @@ export const metadata: Metadata = {
 };
 
 type LayoutProps = {
-  params: {
-    locale: string,
-  },
+  // params: {
+  //   locale: string,
+  // },
   children: React.ReactNode;
 };
 
-export default async function RootLayout({ params, children }: LayoutProps) {
+export default async function RootLayout({ /* params, */ children }: LayoutProps) {
 
   // i18n
-  const { locale } = params;
+  // const { locale } = params;
+
+  const { lang } = useTranslation('common');
+
+  // Redirect to default locale if lang is not supported. /second-page -> /en/second-page
+  if (!(locales ?? []).includes(lang)) {
+    redirect(`/${defaultLocale}/${lang}`);
+  }
+
 
   return (
-    <html lang={locale}>
+    <html lang={lang}>
       <body className={inter.className}>
         {/* <DebugBar /> */}
         <header className="p-4">
           <div className="p-4 bg-neutral-950">
-            <p>RootLayout locale: {locale}</p>
+            <p>RootLayout locale: {lang}</p>
           </div>
         </header>
         {/* Page */}
