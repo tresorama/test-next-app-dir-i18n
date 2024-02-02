@@ -1,8 +1,6 @@
 import { composeMiddleware } from "@/middlewares/utils.chain";
 import { handleLogging } from "@/middlewares/handle-logging";
-import { handlePassRequestDataToServerComponents } from "./middlewares/handle-pass-request-data-to-server-components";
-import { handleInternalization } from "@/i18n/server/i18n.middleware";
-import { handleAuth } from "./auth/auth.middleware";
+import { handleInternalization } from "@/i18n/server";
 
 // TODO: migrate matcher to single midldeware instead of a global one
 export const config = {
@@ -22,7 +20,5 @@ export const config = {
 
 export default composeMiddleware([
   handleLogging,
-  handlePassRequestDataToServerComponents,
   handleInternalization,
-  handleAuth,
 ]);

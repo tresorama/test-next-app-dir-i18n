@@ -4,12 +4,14 @@ import { NextFetchEvent, NextRequest, NextResponse } from "next/server";
 
 type GoNextMiddleware = () => "continue";
 
+type AllReturnTypes = NextResponse<unknown> | Response | ReturnType<GoNextMiddleware>;
 export type MiddlewareFunction = (
   request: NextRequest,
   next: GoNextMiddleware,
   event: NextFetchEvent,
 ) =>
-  | Promise<NextResponse<unknown> | Response | ReturnType<GoNextMiddleware>>;
+  | Promise<AllReturnTypes>
+  | AllReturnTypes;
 
 export function composeMiddleware(handlers: MiddlewareFunction[] = []) {
   const validMiddlewareHandlers = handlers

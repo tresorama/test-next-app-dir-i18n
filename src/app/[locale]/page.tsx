@@ -1,9 +1,4 @@
-import { supportedLocales } from "@/i18n/i18n.config";
-import { getDictionary } from "@/i18n/server/i18n.dictionaries";
-
-export async function generateStaticParams() {
-  return supportedLocales.map(locale => ({ locale }));
-}
+import { AllPages } from "./all-pages";
 
 type PageProps = {
   params: {
@@ -11,13 +6,12 @@ type PageProps = {
   };
 };
 
-export default async function Page(props: PageProps) {
-  const { locale } = props.params;
-  const dictionary = await getDictionary(locale);
+export default async function Page({ params: { locale } }: PageProps) {
 
   return (
-    <main className="p-4">
-      <h1 className="text-3xl">{dictionary.home.title}</h1>
+    <main className="space-y-6">
+      <h1 className="text-3xl">Home</h1>
+      <AllPages locale={locale} />
     </main>
   );
 }
