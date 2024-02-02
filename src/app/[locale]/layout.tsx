@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { LocaleSwitcher } from "./locale-switcher";
+import { Locale } from "@/i18n/i18n.config";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -11,7 +13,7 @@ export const metadata: Metadata = {
 
 type LayoutProps = {
   params: {
-    locale: string,
+    locale: Locale,
   },
   children: React.ReactNode;
 };
@@ -26,8 +28,9 @@ export default async function RootLayout({ params, children }: LayoutProps) {
       <body className={inter.className}>
         {/* <DebugBar /> */}
         <header className="p-4">
-          <div className="p-4 bg-neutral-950">
+          <div className="p-4 bg-neutral-950 flex flex-wrap justify-between items-center">
             <p>RootLayout locale: {locale}</p>
+            <LocaleSwitcher />
           </div>
         </header>
         {/* Page */}

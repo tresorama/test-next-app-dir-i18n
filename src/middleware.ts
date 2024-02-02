@@ -1,5 +1,6 @@
 import { composeMiddleware } from "@/middlewares/utils.chain";
 import { handleLogging } from "@/middlewares/handle-logging";
+import { handleInternalization } from "./i18n/i18n.middleware";
 
 export const config = {
   matcher: [
@@ -20,4 +21,5 @@ export const config = {
 
 export const middleware = composeMiddleware([
   handleLogging,
+  handleInternalization,
 ]);

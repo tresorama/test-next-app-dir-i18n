@@ -1,8 +1,9 @@
+import { Locale } from "@/i18n/i18n.config";
 import { AllPages } from "./all-pages";
 
 type PageProps = {
   params: {
-    locale: string,
+    locale: Locale,
   };
 };
 

@@ -2,13 +2,13 @@
   "home": {
     "title": "Home"
   },
-  "static-page": {
+  "static_page": {
     "title": "Static Page"
   },
-  "dynamic-page": {
+  "dynamic_page": {
     "title": "Dynamic Page"
   },
-  "client-page": {
+  "client_page": {
     "title": "Client Component Page"
   }
 }
