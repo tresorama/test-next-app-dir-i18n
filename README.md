@@ -3,8 +3,9 @@
 Test internationalization wit various library.
 Every test has a differnet `git branch`
 
-- [ ] `manual`  
-  2024-02-01 with next@14.1.0 => ✅ long to implement but doable and you can control every logic flow
+- [x] `manual`  
+  2024-01-30 with next@14.1.0 => ✅ long to implement but doable and you can control every logic flow  
+  2024-02-91 with next@14.1.0 => ✅ inspired by `next-international` extracted as a library
 - [ ] `paraglidjs` *by* [`inlang`](https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
 - [x] [`next-international`](https://github.com/QuiiBz/next-international)  
   2024-02-01 with next@14.1.0 => ✅
