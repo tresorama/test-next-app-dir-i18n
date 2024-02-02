@@ -11,6 +11,7 @@ Every test has a differnet `git branch`
 - [ ] `paraglidjs` *by* [`inlang`](https://inlang.com/m/gerre34r/library-inlang-paraglideJs)
 - [x] [`next-international`](https://github.com/QuiiBz/next-international)  
   2024-02-01 with next@14.1.0 => ✅
+- [ ] [`next-i18n-router`](https://github.com/i18nexus/next-i18n-router/tree/main)  
 - [ ] [`react-intl`](https://formatjs.io/)  
 - [ ] `react-i18next`  
 - [ ] `lingui`  
